@@ -63,8 +63,7 @@ window.setInterval(function(){
     mineMinerals();
     mineGas();
     calcSupply();
-    document.getElementById("time").innerHTML = time;
-}, time);
+}, 5000);
 
 //Window loop update UI each second
 window.setInterval(function(){
@@ -137,8 +136,13 @@ function createsupplyDepot(){
   if (minerals >= 100){
   minerals = minerals - 100;
   supplyDepot = supplyDepot + 1;
+  supplyLimit = 15*(commandCenter + orbitalCommand + planetaryFortress) + 8*supplyDepot;
+  if (supplyLimit > 200){
+    supplyLimit = 200;};
   document.getElementById("supplyDepot").innerHTML = supplyDepot;
+  document.getElementById("supplyLimit").innerHTML = supplyLimit;
   document.getElementById("minerals").innerHTML = minerals;
+  };
 };
 
 
@@ -152,4 +156,14 @@ function updateValues(){
   document.getElementById("minerals").innerHTML = minerals;
   document.getElementById("gas").innerHTML = gas;
   document.getElementById("supplyDepot").innerHTML = supplyDepot;
+};
+
+//Build Barracks
+function createBarracks(){
+  if (minerals >= 150){
+  minerals = minerals - 150;
+  barracks = barracks + 1;
+  document.getElementById("barracks").innerHTML = barracks;
+  document.getElementById("minerals").innerHTML = minerals;
+  };
 };
