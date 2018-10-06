@@ -8,26 +8,26 @@
 <body>
     <div id="flex-container">
         <div class="flex-item1">
-            <h1>Debug</h1>
+            <h1>Production</h1>
             <h2>Minerals: <span id="minerals">0</span></h2>
-						<h2>MineralsEarned: <span id="MineralsEarned">0</span></h2>
-            <h3>Minerals Per Second: <span id="mineralsPerSecond">0</span></h3>
+						<h2>MineralsEarned: <span id="mineralsEarned">0</span></h2>
+						<h2>Mineral Workers: <span id="mineralWorkers">12</span></h2>
             <h2>Gas: <span id="gas">0</span></h2>
-            <h3>Gas Per Second: <span id="gasPerSecond">0</span></h3>
-            <h2>Idle Workers: <span id="idleworkers">0</span></h2>
-						<h2>Mineral Workers: <span id="mineralworkers">12</span></h2>
-						<h2>Gas Workers: <span id="gasworkers">0</span></h2>
+						<h2>Gas Workers: <span id="gasWorkers">0</span></h2>
+						<h2>Idle Workers: <span id="idleWorkers">0</span></h2>
 						<button onclick="createWorkers()">Create Worker</button>
-						<button onclick="assignworkermineral()">Mine Minerals</button>
-						<button onclick="assignworkergas()">Mine Gas</button>
+						<button onclick="assignWorkerMineral()">Mine Minerals</button>
+						<button onclick="assignWorkerGas()">Mine Gas</button>
         </div>
 
         <div class="flex-item2">
           <div class="btn-group" id="Buildings" style="width:100%">
               <h1 class="overview">Buildings</h1>
           </div>
-
+				</div>
+				<div class="flex-item3">
           <div class="btn-group" id="Army" style="width:100%">
+						<h2>Supply: <span id="supply">0</span>/<span id="supplyLimit">200</span></h2>
               <h1 class="overview">Army</h1>
           </div>
         </div>

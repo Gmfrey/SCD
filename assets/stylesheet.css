@@ -31,13 +31,13 @@ h3 {
     font-family: 'Roboto', sans-serif;
 }
 
-p {  
+p {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     display: inline-block;
 }
 
-.ug {  
+.ug {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     margin-left: 10px;
@@ -70,6 +70,14 @@ p {
     border: 1px solid black;
 }
 
+.flex-item3 {
+    width: 40%;
+    height: auto;
+    background-color: lightgrey;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
 .button {
     background-color: #2d3436;
     border: none;
@@ -98,12 +106,12 @@ p {
 }
 
 .btn-group button {
-    background-color: #2d3436; 
+    background-color: #2d3436;
     border: 2px solid black;
     color: white;
-    padding: 10px 24px; 
+    padding: 10px 24px;
     margin: 5px;
-    cursor: pointer; 
+    cursor: pointer;
     width: auto;
     display: block;
     margin-left:auto;
@@ -111,7 +119,7 @@ p {
 }
 
 .btn-group button:not(:last-child) {
-    border-bottom: none; 
+    border-bottom: none;
 }
 
 
