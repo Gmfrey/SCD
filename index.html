@@ -2,7 +2,6 @@
 <html>
 	<head>
     <link rel="stylesheet" type="text/css" href="assets/stylesheet.css" />
-        <script src="assets/scripts/mainbase.js"></script>
   </head>
 
 <body>
@@ -22,15 +21,19 @@
 
         <div class="flex-item2">
           <div class="btn-group" id="Buildings" style="width:100%">
-              <h1 class="overview">Buildings</h1>
+            <h1 class="overview">Buildings</h1>
+						<h2>Command Center: <span id="commandCenter">1</span></h2>
+						<h2>Supply Depot: <span id="supplyDepot">0</span></h2>
+						<button onclick="createsupplyDepot()">Build Supply Depot</button>
           </div>
 				</div>
 				<div class="flex-item3">
           <div class="btn-group" id="Army" style="width:100%">
-						<h2>Supply: <span id="supply">0</span>/<span id="supplyLimit">200</span></h2>
-              <h1 class="overview">Army</h1>
+						<h1 class="overview">Army</h1>
+						<h2>Supply: <span id="supply">0</span>/<span id="supplyLimit">15</span></h2>
           </div>
         </div>
     </div>
 </body>
+<script src="assets/scripts/mainbase.js"></script>
 </html>
