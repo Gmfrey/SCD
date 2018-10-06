@@ -83,17 +83,17 @@ function calcSupply(){
 //Create Idle Worker
 
 function createWorkers(){
-  if (minerals >= 50 &&  supply < supplyLimit){
+  if (minerals >= 50 && supply < supplyLimit){
   idleWorkers = idleWorkers + 1;
   minerals = minerals - 50;
   supply = supply + 1;
-};
   document.getElementById("idleWorkers").innerHTML = idleWorkers;
   document.getElementById("mineralWorkers").innerHTML = mineralWorkers;
   document.getElementById("minerals").innerHTML = minerals;
   document.getElementById("gas").innerHTML = gas;
   document.getElementById("supply").innerHTML = supply;
   document.getElementById("supplyLimit").innerHTML = supplyLimit;
+  };
 };
 
 //Assign workers - minerals
@@ -152,4 +152,4 @@ function updateValues(){
   document.getElementById("minerals").innerHTML = minerals;
   document.getElementById("gas").innerHTML = gas;
   document.getElementById("supplyDepot").innerHTML = supplyDepot;
-};};
+};
