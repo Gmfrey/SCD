@@ -6,12 +6,6 @@ var gas = 0;
 
 var gasEarned = 0;
 
-var idleWorkers = 0;
-
-var mineralWorkers = 12;
-
-var gasWorkers = 0;
-
 var mineralPatch = 8;
 
 var gasPatch = 2;
@@ -21,6 +15,10 @@ var time = 5000;
 var supply = 12;
 
 var supplyLimit = 15;
+
+var armyValue = 0;
+
+///BUILDINGS////
 
 var commandCenter = 1;
 
@@ -55,6 +53,52 @@ var fusionCore = 0;
 var techLab = 0;
 
 var reactor = 0;
+
+///////UNITS///////////
+
+var idleWorkers = 0;
+
+var mineralWorkers = 12;
+
+var gasWorkers = 0;
+
+var marine = 0;
+
+var marauder = 0;
+
+var reaper = 0;
+
+var ghost = 0;
+
+var hellion = 0;
+
+var hellbat = 0;
+
+var widowMine = 0;
+
+var siegeTank = 0;
+
+var cyclone = 0;
+
+var thor = 0;
+
+var viking = 0;
+
+var medivac = 0;
+
+var liberator = 0;
+
+var banshee = 0;
+
+var raven = 0;
+
+var battlecruiser = 0;
+
+var missleTurret = 0;
+
+var autoTurret = 0;
+
+var pointDefenceDrone = 0;
 
 
 
@@ -313,3 +357,19 @@ function createSensorTower(){
 
 
 //////Need to Add techLab, reactor////
+
+/////////ARMY UNITS/////////////////
+
+//Build Marine
+function createMarine(){
+  if (minerals >= 50 && barracks >= 1 && supply < supplyLimit){
+    marine = marine + 1;
+    minerals = minerals - 50;
+    supply = supply + 1;
+    armyValue = armyValue +1;
+    document.getElementById("marine").innerHTML = marine;
+    document.getElementById("minerals").innerHTML = minerals;
+    document.getElementById("supply").innerHTML = supply;
+    document.getElementById("armyValue").innerHTML = armyValue;
+  };
+};
