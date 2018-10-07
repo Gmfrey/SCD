@@ -7,26 +7,55 @@
 <body>
     <div id="flex-container">
         <div class="flex-item1">
+					<div class="btn-group">
             <h1>Production</h1>
             <h2>Minerals: <span id="minerals">0</span></h2>
-						<h2>MineralsEarned: <span id="mineralsEarned">0</span></h2>
+						<h2>Gas: <span id="gas">0</span></h2>
+						<br>
 						<h2>Mineral Workers: <span id="mineralWorkers">12</span></h2>
-            <h2>Gas: <span id="gas">0</span></h2>
 						<h2>Gas Workers: <span id="gasWorkers">0</span></h2>
 						<h2>Idle Workers: <span id="idleWorkers">0</span></h2>
-						<button onclick="createWorkers()">Create Worker</button>
+						<br>
+						<h2>Mineral Patches: <span id="mineralPatch">8</span></h2>
+						<h2>Gas Patches: <span id="gasPatch">2</span></h2>
+						<h2>Idle Workers: <span id="idleWorkers">0</span></h2>
+						<button onclick="createWorkers()">Create Worker 50 Minerals</button>
 						<button onclick="assignWorkerMineral()">Mine Minerals</button>
 						<button onclick="assignWorkerGas()">Mine Gas</button>
+					</div>
         </div>
 
         <div class="flex-item2">
           <div class="btn-group" id="Buildings" style="width:100%">
             <h1 class="overview">Buildings</h1>
 						<h2>Command Center: <span id="commandCenter">1</span></h2>
+						<button onclick="createCommandCenter()">Build Command Center 400 Minerals</button>
+						<h2>Planetary Fortress: <span id="planetaryFortress">0</span></h2>
+						<button onclick="createPlanetaryFortress()">Upgrade Command Center to Planetary Fortress 150 Minerals 150 Gas</button>
+						<h2>Orbital Command: <span id="orbitalCommand">0</span></h2>
+						<button onclick="createOrbitalCommand()">Upgrade Command Center to Orbital Command 150 Minerals</button>
 						<h2>Supply Depot: <span id="supplyDepot">0</span></h2>
-						<button onclick="createsupplyDepot()">Build Supply Depot</button>
+						<button onclick="createSupplyDepot()">Build Supply Depot 100 Minerals</button>
 						<h2>Barracks: <span id="barracks">0</span></h2>
-						<button onclick="createBarracks()">Build Barracks</button>
+						<button onclick="createBarracks()">Build Barracks 150 Mineral</button>
+						<h2>Refineries: <span id="refinery">0</span></h2>
+						<button onclick="createRefinery()">Build Refinery 75 Minerals</button>
+						<h2>Engineering Bay: <span id="engineeringBay">0</span></h2>
+						<button onclick="createEngineeringBay()">Build Engineering Bay 150 Minerals</button>
+						<h2>Bunker: <span id="bunker">0</span></h2>
+						<button onclick="createBunker()">Build Bunker 100 Minerals</button>
+						<h2>Factory: <span id="factory">0</span></h2>
+						<button onclick="createFactory()">Build Factory 150 Minerals 100 Gas</button>
+						<h2>Ghost Academy: <span id="ghostAcademy">0</span></h2>
+						<button onclick="createGhostAcademy()">Build Factory 150 Minerals 50 Gas</button>
+						<h2>Armory: <span id="armory">0</span></h2>
+						<button onclick="createArmory()">Build Factory 150 Minerals 100 Gas</button>
+						<h2>Starport: <span id="starport">0</span></h2>
+						<button onclick="createStarport()">Build Starport 150 Minerals 100 Gas</button>
+						<h2>Fusion Core: <span id="fusionCore">0</span></h2>
+						<button onclick="createFusionCore()">Build Fusion Core 150 Minerals 150 Gas</button>
+						<h2>Sensor Tower: <span id="sensorTower">0</span></h2>
+						<button onclick="createSensorTower()">Build Sensor Tower 125 Minerals 100 Gas</button>
           </div>
 				</div>
 				<div class="flex-item3">

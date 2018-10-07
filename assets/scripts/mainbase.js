@@ -1,8 +1,8 @@
-var minerals = 0;
+var minerals = 10000;
 
 var mineralsEarned = 0;
 
-var gas = 0;
+var gas = 10000;
 
 var gasEarned = 0;
 
@@ -108,7 +108,7 @@ function assignWorkerMineral(){
 };
 //Assign workers - gas
 function assignWorkerGas(){
-  if (idleWorkers >= 1 && gasWorkers < gasPatch * 3){
+  if (idleWorkers >= 1 && gasWorkers < refinery * 3){
     idleWorkers = idleWorkers - 1;
     gasWorkers = gasWorkers + 1;
     document.getElementById("idleWorkers").innerHTML = idleWorkers;
@@ -130,20 +130,6 @@ function mineGas(){
   gas = gas + gasEarned
   document.getElementById("gas").innerHTML = gas;
 };
-//Create Supply Depot
-
-function createsupplyDepot(){
-  if (minerals >= 100){
-  minerals = minerals - 100;
-  supplyDepot = supplyDepot + 1;
-  supplyLimit = 15*(commandCenter + orbitalCommand + planetaryFortress) + 8*supplyDepot;
-  if (supplyLimit > 200){
-    supplyLimit = 200;};
-  document.getElementById("supplyDepot").innerHTML = supplyDepot;
-  document.getElementById("supplyLimit").innerHTML = supplyLimit;
-  document.getElementById("minerals").innerHTML = minerals;
-  };
-};
 
 
 //Update All Values in HTML page every second
@@ -158,6 +144,68 @@ function updateValues(){
   document.getElementById("supplyDepot").innerHTML = supplyDepot;
 };
 
+///////////////////////////////////BUILDINGS//////////////////////////////////////////
+
+//Build Supply Depot
+
+function createSupplyDepot(){
+  if (minerals >= 100){
+  minerals = minerals - 100;
+  supplyDepot = supplyDepot + 1;
+  supplyLimit = 15*(commandCenter + orbitalCommand + planetaryFortress) + 8*supplyDepot;
+  if (supplyLimit > 200){
+    supplyLimit = 200;};
+  document.getElementById("supplyDepot").innerHTML = supplyDepot;
+  document.getElementById("supplyLimit").innerHTML = supplyLimit;
+  document.getElementById("minerals").innerHTML = minerals;
+  };
+};
+
+//Build Command Center
+function createCommandCenter(){
+  if (minerals >= 400){
+  minerals = minerals - 400;
+  commandCenter = commandCenter + 1;
+  mineralPatch = mineralPatch + 6;
+  gasPatch = gasPatch + 2;
+  supplyLimit = 15*(commandCenter + orbitalCommand + planetaryFortress) + 8*supplyDepot;
+  if (supplyLimit > 200){
+    supplyLimit = 200;};
+  document.getElementById("supplyLimit").innerHTML = supplyLimit;
+  document.getElementById("commandCenter").innerHTML = commandCenter;
+  document.getElementById("minerals").innerHTML = minerals;
+  document.getElementById("minerals").innerHTML = minerals;
+  document.getElementById("mineralPatch").innerHTML = mineralPatch;
+  document.getElementById("gasPatch").innerHTML = gasPatch;
+
+  };
+};
+
+//Upgrade Command Center to Planetary Fortress
+function createPlanetaryFortress(){
+  if (minerals >= 150 && gas >= 150 && commandCenter >= 1){
+  minerals = minerals - 150;
+  gas = gas - 150;
+  commandCenter = commandCenter - 1;
+  planetaryFortress = planetaryFortress + 1;
+  document.getElementById("commandCenter").innerHTML = commandCenter;
+  document.getElementById("planetaryFortress").innerHTML = planetaryFortress;
+  document.getElementById("minerals").innerHTML = minerals;
+  document.getElementById("gas").innerHTML = gas;
+  };
+};
+//Upgrade Command Center to Orbital Command
+function createOrbitalCommand(){
+  if (minerals >= 150 && commandCenter >= 1){
+  minerals = minerals - 150;
+  commandCenter = commandCenter - 1;
+  orbitalCommand = orbitalCommand + 1;
+  document.getElementById("commandCenter").innerHTML = commandCenter;
+  document.getElementById("orbitalCommand").innerHTML = orbitalCommand;
+  document.getElementById("minerals").innerHTML = minerals;
+
+  };
+};
 //Build Barracks
 function createBarracks(){
   if (minerals >= 150){
@@ -167,3 +215,101 @@ function createBarracks(){
   document.getElementById("minerals").innerHTML = minerals;
   };
 };
+
+//Build Refinery
+function createRefinery(){
+  if (minerals >= 75 && refinery < gasPatch){
+  minerals = minerals - 75;
+  refinery = refinery + 1;
+  document.getElementById("refinery").innerHTML = refinery;
+  document.getElementById("minerals").innerHTML = minerals;
+  };
+};
+//Build engineeringBay
+function createEngineeringBay(){
+  if (minerals >= 150){
+  minerals = minerals - 150;
+  engineeringBay = engineeringBay + 1;
+  document.getElementById("engineeringBay").innerHTML = engineeringBay;
+  document.getElementById("minerals").innerHTML = minerals;
+  };
+};
+//Build Bunker
+function createBunker(){
+  if (minerals >= 100){
+  minerals = minerals - 150;
+  bunker = bunker + 1;
+  document.getElementById("bunker").innerHTML = bunker;
+  document.getElementById("minerals").innerHTML = minerals;
+  };
+};
+
+//Build Factory
+function createFactory(){
+  if (minerals >= 150 && gas >= 100){
+  minerals = minerals - 150;
+  gas = gas - 100;
+  factory = factory + 1;
+  document.getElementById("factory").innerHTML = factory;
+  document.getElementById("minerals").innerHTML = minerals;
+  document.getElementById('gas').innerHTML = gas;
+  };
+};
+//Build Ghost Academy
+function createGhostAcademy(){
+  if (minerals >= 150 && gas >= 50){
+  minerals = minerals - 150;
+  gas = gas - 50;
+  ghostAcademy = ghostAcademy + 1;
+  document.getElementById("ghostAcademy").innerHTML = ghostAcademy;
+  document.getElementById("minerals").innerHTML = minerals;
+  document.getElementById('gas').innerHTML = gas;
+  };
+};
+//Build Armory
+function createArmory(){
+  if (minerals >= 150 && gas >= 100){
+  minerals = minerals - 150;
+  gas = gas - 100;
+  armory = armory + 1;
+  document.getElementById("armory").innerHTML = armory;
+  document.getElementById("minerals").innerHTML = minerals;
+  document.getElementById('gas').innerHTML = gas;
+  };
+};
+//Build Starport
+function createStarport(){
+  if (minerals >= 150 && gas >= 100){
+  minerals = minerals - 150;
+  gas = gas - 100;
+  starport = starport + 1;
+  document.getElementById("starport").innerHTML = starport;
+  document.getElementById("minerals").innerHTML = minerals;
+  document.getElementById('gas').innerHTML = gas;
+  };
+};
+//Build Fusion Core
+function createFusionCore(){
+  if (minerals >= 150 && gas >= 150){
+  minerals = minerals - 150;
+  gas = gas - 150;
+  fusionCore = fusionCore + 1;
+  document.getElementById("fusionCore").innerHTML = fusionCore;
+  document.getElementById("minerals").innerHTML = minerals;
+  document.getElementById('gas').innerHTML = gas;
+  };
+};
+//Build Sensor Tower
+function createSensorTower(){
+  if (minerals >= 125 && gas >= 100){
+  minerals = minerals - 125;
+  gas = gas - 100;
+  sensorTower = sensorTower + 1;
+  document.getElementById("sensorTower").innerHTML = sensorTower;
+  document.getElementById("minerals").innerHTML = minerals;
+  document.getElementById('gas').innerHTML = gas;
+  };
+};
+
+
+//////Need to Add techLab, reactor////
