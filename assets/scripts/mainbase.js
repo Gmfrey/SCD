@@ -170,7 +170,7 @@ function mineMinerals(){
 };
 //Mine gas function
 function mineGas(){
-  gasEarned = gasWorkers * 5;
+  gasEarned = gasWorkers * 4;
   gas = gas + gasEarned
   document.getElementById("gas").innerHTML = gas;
 };
