@@ -36,26 +36,40 @@
 						<button onclick="createOrbitalCommand()">Upgrade Command Center to Orbital Command 150 Minerals</button>
 						<h2>Supply Depot: <span id="supplyDepot">0</span></h2>
 						<button onclick="createSupplyDepot()">Build Supply Depot 100 Minerals</button>
-						<h2>Barracks: <span id="barracks">0</span></h2>
-						<button onclick="createBarracks()">Build Barracks 150 Mineral</button>
 						<h2>Refineries: <span id="refinery">0</span></h2>
 						<button onclick="createRefinery()">Build Refinery 75 Minerals</button>
+						<h2>Barracks: <span id="barracks">0</span></h2>
+						<button onclick="createBarracks()">Build Barracks 150 Mineral</button>
+						<h2>Barracks with Tech Lab: <span id="barracksTechLab">0</span></h2>
+						<button onclick="createBarracksTechLab()">Upgrade Barracks with Tech Lab 50 Minerals 25 Gas</button>
+						<h2>Barracks with Reactor: <span id="barracksReactor">0</span></h2>
+						<button onclick="createBarracksReactor()">Upgrade Barracks with Reactor 50 Minerals 50 Gas</button>
 						<h2>Engineering Bay: <span id="engineeringBay">0</span></h2>
 						<button onclick="createEngineeringBay()">Build Engineering Bay 150 Minerals</button>
 						<h2>Bunker: <span id="bunker">0</span></h2>
 						<button onclick="createBunker()">Build Bunker 100 Minerals</button>
 						<h2>Factory: <span id="factory">0</span></h2>
 						<button onclick="createFactory()">Build Factory 150 Minerals 100 Gas</button>
+						<h2>Factory with Reactor: <span id="factoryReactor">0</span></h2>
+						<button onclick="createFactoryReactor()">Upgrade Factory with Tech Lab 50 Minerals 50 Gas</button>
+						<h2>Factory with Tech Lab: <span id="factoryTechLab">0</span></h2>
+						<button onclick="createFactoryTechLab()">Upgrade Factory with Tech Lab 50 Minerals 25 Gas</button>
 						<h2>Ghost Academy: <span id="ghostAcademy">0</span></h2>
 						<button onclick="createGhostAcademy()">Build Factory 150 Minerals 50 Gas</button>
 						<h2>Armory: <span id="armory">0</span></h2>
 						<button onclick="createArmory()">Build Factory 150 Minerals 100 Gas</button>
 						<h2>Starport: <span id="starport">0</span></h2>
 						<button onclick="createStarport()">Build Starport 150 Minerals 100 Gas</button>
+						<h2>Starport with Tech Lab: <span id="starportTechLab">0</span></h2>
+						<button onclick="createStarportTechLab()">Upgrade Starport with Tech Lab 50 Minerals 25 Gas</button>
+						<h2>Starport with Reactor: <span id="starportReactor">0</span></h2>
+						<button onclick="createStarportReactor()">Upgrade Starport with Reactor 50 Minerals 50 Gas</button>
 						<h2>Fusion Core: <span id="fusionCore">0</span></h2>
 						<button onclick="createFusionCore()">Build Fusion Core 150 Minerals 150 Gas</button>
 						<h2>Sensor Tower: <span id="sensorTower">0</span></h2>
 						<button onclick="createSensorTower()">Build Sensor Tower 125 Minerals 100 Gas</button>
+						<h2>Missile Turret: <span id="missileTurret">0</span></h2>
+						<button onclick="createMissileTurret()">Build Missile Turret 100 Minerals</button>
           </div>
 				</div>
 				<div class="flex-item3">
@@ -63,9 +77,42 @@
 						<h1 class="overview">Army</h1>
 						<h2> Army Value: <span id="armyValue">0</span>
 						<h2>Supply: <span id="supply">0</span>/<span id="supplyLimit">15</span></h2>
+						<h1>Barracks Units</h1>
 						<h2>Marine: <span id="marine">0</span></h2>
-						<button onclick="createMarine()">Build Marine 50 Minerals</button>
-          </div>
+							<button onclick="createMarine()">Build Marine 50 Minerals</button>
+						<h2>Marauder: <span id="marauder">0</span></h2>
+							<button onclick="createMarauder()">Build Marauder 100 Minerals 25 Gas</button>
+						<h2>Reaper: <span id="reaper">0</span></h2>
+							<button onclick="createReaper()">Build Reaper 50 Minerals 50 Gas</button>
+						<h2>Ghost: <span id="ghost">0</span></h2>
+							<button onclick="createGhost()">Build Ghost 150 Minerals 125 Gas</button>
+						<h1> Factory Units</h1>
+						<h2>Hellion: <span id="hellion">0</span></h2>
+							<button onclick="createHellion()">Build Hellion 100 Minerals</button>
+						<h2>Widow Mine: <span id="widowMine">0</span></h2>
+							<button onclick="createWidowMine()">Build Widow Mine 75 Minerals 25 Gas</button>
+						<h2>Seige Tank: <span id="siegeTank">0</span></h2>
+							<button onclick="createSiegeTank()">Build SiegeTank 150 Minerals 125 Gas</button>
+						<h2>Cyclone: <span id="cyclone">0</span></h2>
+							<button onclick="createCyclone()">Build Cyclone 150 Minerals 100 Gas</button>
+						<h2>Hellbat: <span id="hellbat">0</span></h2>
+							<button onclick="createHellbat()">Build Hellbat 100 Minerals</button>
+						<h2>Thor: <span id="thor">0</span></h2>
+							<button onclick="createThor()">Build Thor 300 Minerals 200 Gas</button>
+						<h1> Starport Units</h2>
+						<h2>Viking: <span id="viking">0</span></h2>
+							<button onclick="createViking()">Build Viking 150 Minerals 75 Gas</button>
+						<h2>Medivac: <span id="medivac">0</span></h2>
+							<button onclick="createMedivac()">Build Medivac 100 Minerals 100 Gas</button>
+						<h2>Liberator: <span id="liberator">0</span></h2>
+							<button onclick="createLiberator()">Build Liberator 150 Minerals 150 Gas</button>
+						<h2>Raven: <span id="raven">0</span></h2>
+							<button onclick="createRaven()">Build Raven 100 Minerals 200 Gas</button>
+						<h2>Banshee: <span id="banshee">0</span></h2>
+							<button onclick="createBanshee()">Build Banshee 150 Minerals 100 Gas</button>
+						<h2>Battlecruiser: <span id="battlecruiser">0</span></h2>
+							<button onclick="createBattlecruiser()">Build Battlecruiser 400 Minerals 300 Gas</button>
+					</div>
         </div>
     </div>
 </body>
