@@ -64,7 +64,11 @@ var fusionCore = 0;
 
 var techLab = 0;
 
+var idleTechLab = 0;
+
 var reactor = 0;
+
+var idleReactor = 0;
 
 ///////UNITS///////////
 
@@ -281,6 +285,28 @@ function createBarracksTechLab(){
   };
 };
 
+///Liftoff Barracks with Techlab
+function liftBarracksTechLab(){
+  if (barracksTechLab >=1){
+    barracksTechLab = barracksTechLab - 1;
+    barracks = barracks + 1;
+    idleTechLab = idleTechLab + 1;
+    document.getElementById("barracks").innerHTML = barracks;
+    document.getElementById("barracksTechLab").innerHTML = barracksTechLab;
+    //document.getElementById("idleTechLab").innerHTML = idleTechLab;
+  }
+}
+///Land Barracks with Techlab
+function landBarracksTechLab(){
+  if (idleTechLab >=1 && barracks >= 1){
+    barracksTechLab = barracksTechLab + 1;
+    barracks = barracks - 1;
+    document.getElementById("barracks").innerHTML = barracks;
+    document.getElementById("barracksTechLab").innerHTML = barracksTechLab;
+    //document.getElementById("idleTechLab").innerHTML = idleTechLab;
+  }
+}
+
 //Upgrade Barracks with Reactor
 function createBarracksReactor(){
   if (minerals >= 50 && gas >= 50 && barracks >= 1){
@@ -294,6 +320,28 @@ function createBarracksReactor(){
   document.getElementById("barracksReactor").innerHTML = barracksReactor;
   };
 };
+
+///Liftoff Barracks with Reactor
+function liftBarracksReactor(){
+  if (barracksReactor >=1){
+    barracksReactor = barracksReactor - 1;
+    barracks = barracks + 1;
+    idleReactor = idleReactor + 1;
+    document.getElementById("barracks").innerHTML = barracks;
+    document.getElementById("barracksReactor").innerHTML = barracksReactor;
+    //document.getElementById("idleReactor").innerHTML = idleReactor;
+  }
+}
+///Land Barracks with Reactor
+function landBarracksReactor(){
+  if (idleReactor >=1 && barracks >= 1){
+    barracksReactor = barracksReactor + 1;
+    barracks = barracks - 1;
+    document.getElementById("barracks").innerHTML = barracks;
+    document.getElementById("barracksReactor").innerHTML = barracksReactor;
+    //document.getElementById("idleReactor").innerHTML = idleReactor;
+  }
+}
 
 //Build Refinery
 function createRefinery(){
@@ -349,6 +397,29 @@ function createFactoryTechLab(){
   };
 };
 
+///Liftoff Factory with Techlab
+function liftFactoryTechLab(){
+  if (factoryTechLab >=1){
+    factoryTechLab = factoryTechLab - 1;
+    factory = factory + 1;
+    idleTechLab = idleTechLab + 1;
+    document.getElementById("factory").innerHTML = factory;
+    document.getElementById("factoryTechLab").innerHTML = factoryTechLab;
+    //document.getElementById("idleTechLab").innerHTML = idleTechLab;
+  }
+}
+///Land Barracks with Techlab
+function landFactoryTechLab(){
+  if (idleTechLab >=1 && factory >= 1){
+    factoryTechLab = factoryTechLab + 1;
+    factory = factory - 1;
+    document.getElementById("factory").innerHTML = factory;
+    document.getElementById("factoryTechLab").innerHTML = factoryTechLab;
+    //document.getElementById("idleTechLab").innerHTML = idleTechLab;
+  }
+}
+
+
 //Upgrade Factory with Reactor
 function createFactoryReactor(){
   if (minerals >= 50 && gas >= 50 && factory >= 1){
@@ -362,6 +433,28 @@ function createFactoryReactor(){
   document.getElementById("factoryReactor").innerHTML = factoryReactor;
   };
 };
+
+///Liftoff Factory with Reactor
+function liftFactoryReactor(){
+  if (factoryReactor >=1){
+    factoryReactor = factoryReactor - 1;
+    factory = factory + 1;
+    idleReactor = idleReactor + 1;
+    document.getElementById("factory").innerHTML = factory;
+    document.getElementById("factoryReactor").innerHTML = factoryReactor;
+    //document.getElementById("idleReactor").innerHTML = idleReactor;
+  }
+}
+///Land Factory with Reactor
+function landFactoryReactor(){
+  if (idleReactor >=1 && factory >= 1){
+    factoryReactor = factoryReactor + 1;
+    factory = factory - 1;
+    document.getElementById("factory").innerHTML = factory;
+    document.getElementById("factoryReactor").innerHTML = factoryReactor;
+    //document.getElementById("idleReactor").innerHTML = idleReactor;
+  }
+}
 
 
 //Build Ghost Academy
@@ -412,6 +505,28 @@ function createStarportTechLab(){
   };
 };
 
+///Liftoff Starport with Techlab
+function liftStarportTechLab(){
+  if (starportTechLab >=1){
+    starportTechLab = starportTechLab - 1;
+    starport = starport + 1;
+    idleTechLab = idleTechLab + 1;
+    document.getElementById("starport").innerHTML = starport;
+    document.getElementById("starportTechLab").innerHTML = starportTechLab;
+    //document.getElementById("idleTechLab").innerHTML = idleTechLab;
+  }
+}
+///Land Starport with Techlab
+function landStarportTechLab(){
+  if (idleTechLab >=1 && starport >= 1){
+    starportTechLab = starportTechLab + 1;
+    starport = starport - 1;
+    document.getElementById("starport").innerHTML = starport;
+    document.getElementById("starportTechLab").innerHTML = starportTechLab;
+    //document.getElementById("idleTechLab").innerHTML = idleTechLab;
+  }
+}
+
 //Upgrade Starport with Reactor
 function createStarportReactor(){
   if (minerals >= 50 && gas >= 50 && starport >= 1){
@@ -425,6 +540,28 @@ function createStarportReactor(){
   document.getElementById("starportReactor").innerHTML = starportReactor;
   };
 };
+
+///Liftoff Starport with Reactor
+function liftStarportReactor(){
+  if (starportReactor >=1){
+    starportReactor = starportReactor - 1;
+    starport = starport + 1;
+    idleReactor = idleReactor + 1;
+    document.getElementById("starport").innerHTML = starport;
+    document.getElementById("starportReactor").innerHTML = starportReactor;
+    //document.getElementById("idleReactor").innerHTML = idleReactor;
+  }
+}
+///Land Starport with Reactor
+function landStarportReactor(){
+  if (idleReactor >=1 && starport >=1){
+    starportReactor = starportReactor + 1;
+    starport = starport - 1;
+    document.getElementById("starport").innerHTML = starport;
+    document.getElementById("starportReactor").innerHTML = starportReactor;
+    //document.getElementById("idleReactor").innerHTML = idleReactor;
+  }
+}
 
 //Build Fusion Core
 function createFusionCore(){
@@ -618,7 +755,7 @@ function createThor(){
 };
 //Build Medivac
 function createMedivac(){
-  if (minerals >= 100 && gas >= 100 && supply + 2 >= supplyLimit && starport >= 1 || starportReactor >=1 || starportTechLab >= 1){
+  if (minerals >= 100 && gas >= 100 && supply + 2 <= supplyLimit && starport >= 1 || starportReactor >=1 || starportTechLab >= 1){
     medivac = medivac + 1;
     minerals = minerals -100;
     gas = gas - 100;
@@ -633,7 +770,7 @@ function createMedivac(){
 };
 //Build Viking
 function createViking(){
-  if (minerals >= 150 && gas >= 75 && supply + 2 >= supplyLimit && starport >= 1 || starportReactor >=1 || starportTechLab >= 1){
+  if (minerals >= 150 && gas >= 75 && supply + 2 <= supplyLimit && starport >= 1 || starportReactor >=1 || starportTechLab >= 1){
     viking = viking + 1;
     minerals = minerals - 150;
     gas = gas - 75;
@@ -649,7 +786,7 @@ function createViking(){
 
 //Build Liberator
 function createLiberator(){
-  if (minerals >= 150 && gas >= 150 && supply + 3 >= supplyLimit && starport >= 1 || starportReactor >=1 || starportTechLab >= 1){
+  if (minerals >= 150 && gas >= 150 && supply + 3 <= supplyLimit && starport >= 1 || starportReactor >=1 || starportTechLab >= 1){
     liberator = liberator + 1;
     minerals = minerals - 150;
     gas = gas - 150;
@@ -665,7 +802,7 @@ function createLiberator(){
 
 //Build Banshee
 function createBanshee(){
-  if (minerals >= 150 && gas >= 100 && supply + 3 >= supplyLimit && starportTechLab >= 1){
+  if (minerals >= 150 && gas >= 100 && supply + 3 <= supplyLimit && starportTechLab >= 1){
     banshee = banshee + 1;
     minerals = minerals - 150;
     gas = gas - 100;
@@ -681,7 +818,7 @@ function createBanshee(){
 
 //Build Raven
 function createRaven(){
-  if (minerals >= 100 && gas >= 200 && supply + 2 >= supplyLimit && starportTechLab >= 1){
+  if (minerals >= 100 && gas >= 200 && supply + 2 <= supplyLimit && starportTechLab >= 1){
     raven = raven + 1;
     minerals = minerals - 100;
     gas = gas - 200;
@@ -697,7 +834,7 @@ function createRaven(){
 
 //Build Battlecruiser
 function createBattlecruiser(){
-  if (minerals >= 400 && gas >= 300 && supply + 2 >= supplyLimit && starportTechLab >= 1 && fusionCore >= 1){
+  if (minerals >= 400 && gas >= 300 && supply + 2 <= supplyLimit && starportTechLab >= 1 && fusionCore >= 1){
     battlecruiser = battlecruiser + 1;
     minerals = minerals - 400;
     gas = gas - 300;
