@@ -1,8 +1,8 @@
-var minerals = 10000;
+var minerals = 0;
 
 var mineralsEarned = 0;
 
-var gas = 10000;
+var gas = 0;
 
 var gasEarned = 0;
 
